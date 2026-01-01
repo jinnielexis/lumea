@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Details - Lumea Cosmetics</title>
+
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <i class="fas fa-gem me-2"></i>Lumea Cosmetics
+                </a>
+
+                <div class="ms-auto d-flex align-items-center">
+                    <a href="../index.html" class="nav-link me-3" title="Home">
+                        <i class="fas fa-home me-1"></i>Home
+                    </a>
+                    <a href="search.html" class="nav-link me-3">
+                        <i class="fas fa-search me-1"></i>Search
+                    </a>
+                    <a href="cart.html" class="cart-icon me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">0</span>
+                    </a>
+                    <a href="signin.html" class="profile-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Product Details -->
+        <div class="container py-5">
+            <div class="row">
+                <!-- Product Image -->
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-white rounded-custom p-4 shadow-custom">
+                        <img id="productImage" src="" alt="Product" class="img-fluid rounded-custom">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div id="productInfo"></div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="mt-5" id="relatedProducts"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Lumea Cosmetics. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="../js/main.js"></script>
+        <script src="../js/products.js"></script>
+        <script src="../js/cart.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // 1. First, check if the user is logged in to update the UI
+                LumeaUtils.updateProfileIcon();
+                LumeaUtils.updateCartBadge();
+
+                // 2. Display all products initially
+                LumeaProducts.applyFilters();
+
+                // 3. IMPORTANT: Check if there is a search query in the URL
+                // This is what reads the "?q=lipstick" from the Home Page
+                LumeaProducts.handleUrlSearch();
+            });
+        </script>
+    </body>
+
+</html>

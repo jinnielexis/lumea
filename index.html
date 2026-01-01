@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Lumea Cosmetics - Premium beauty and cosmetics products for radiant skin">
+        <title>Lumea Cosmetics - Home</title>
+
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-gem me-2"></i>Lumea Cosmetics
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/search.html?category=Skincare">Skincare</a></li>
+                                <li><a class="dropdown-item" href="pages/search.html?category=Makeup">Makeup</a></li>
+                                <li><a class="dropdown-item" href="pages/search.html?category=Haircare">Haircare</a></li>
+                                <li><a class="dropdown-item" href="pages/search.html?category=Fragrance">Fragrance</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <div class="search-bar"> <i class="fas fa-search"></i>
+                                <input type="search" class="form-control" id="navSearchInput" placeholder="Search products...">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/cart.html" class="cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-badge">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/signin.html" class="profile-icon" title="Sign In">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Carousel -->
+        <div class="hero-carousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide"
+                 style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1920&h=600&fit=crop');">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Discover <span class="highlight">Timeless</span> Beauty</h1>
+                        <p>Premium cosmetics crafted with elegance and care. Embrace your radiance with Lumea's luxurious collection.
+                        </p>
+                        <a href="pages/search.html" class="btn btn-primary-custom btn-lg me-3">
+                            <i class="fas fa-shopping-bag me-2"></i>Shop Now
+                        </a>
+                        <a href="#featured" class="btn btn-gold btn-lg">
+                            <i class="fas fa-star me-2"></i>View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide"
+                 style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1920&h=600&fit=crop');">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Elevate Your <span class="highlight">Routine</span></h1>
+                        <p>Experience the perfect blend of luxury and efficacy. Transform your skincare ritual into an art form.</p>
+                        <a href="pages/search.html?category=Skincare" class="btn btn-primary-custom btn-lg me-3">
+                            <i class="fas fa-spa me-2"></i>Explore Skincare
+                        </a>
+                        <a href="#featured" class="btn btn-gold btn-lg">
+                            <i class="fas fa-gem me-2"></i>Premium Selection
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide"
+                 style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=1920&h=600&fit=crop');">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Radiance <span class="highlight">Redefined</span></h1>
+                        <p>Unveil your natural glow with our curated makeup collection. Where beauty meets sophistication.</p>
+                        <a href="pages/search.html?category=Makeup" class="btn btn-primary-custom btn-lg me-3">
+                            <i class="fas fa-palette me-2"></i>Shop Makeup
+                        </a>
+                        <a href="#featured" class="btn btn-gold btn-lg">
+                            <i class="fas fa-crown me-2"></i>Bestsellers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Products -->
+        <section class="py-5" id="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Products</h2>
+                    <p class="section-subtitle">Handpicked favorites for your beauty routine</p>
+                </div>
+                <div class="row" id="featuredProducts"></div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="py-5 bg-cream">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">New Arrivals</h2>
+                    <p class="section-subtitle">Fresh additions to our collection</p>
+                </div>
+                <div class="row" id="newArrivals"></div>
+            </div>
+        </section>
+
+        <!-- Best Sellers -->
+        <section class="py-5">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Best Sellers</h2>
+                    <p class="section-subtitle">Customer favorites you'll love</p>
+                </div>
+                <div class="row" id="bestSellers"></div>
+            </div>
+        </section>
+
+        <!-- Categories Showcase -->
+        <section class="py-5 bg-cream">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Shop by Category</h2>
+                    <p class="section-subtitle">Find exactly what you need</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <a href="pages/search.html?category=Skincare" class="text-decoration-none">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon pink mx-auto">
+                                    <i class="fas fa-spa"></i>
+                                </div>
+                                <h5 class="mt-3">Skincare</h5>
+                                <p class="text-muted">Nourish & Glow</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="pages/search.html?category=Makeup" class="text-decoration-none">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon gold mx-auto">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h5 class="mt-3">Makeup</h5>
+                                <p class="text-muted">Express Yourself</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="pages/search.html?category=Haircare" class="text-decoration-none">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon pink mx-auto">
+                                    <i class="fas fa-cut"></i>
+                                </div>
+                                <h5 class="mt-3">Haircare</h5>
+                                <p class="text-muted">Silky & Strong</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="pages/search.html?category=Fragrance" class="text-decoration-none">
+                            <div class="stat-card text-center">
+                                <div class="stat-icon gold mx-auto">
+                                    <i class="fas fa-spray-can"></i>
+                                </div>
+                                <h5 class="mt-3">Fragrance</h5>
+                                <p class="text-muted">Captivating Scents</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <h5>About Lumea</h5>
+                        <p>Premium cosmetics brand dedicated to enhancing your natural beauty with luxurious, high-quality products.
+                        </p>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-4">
+                        <h5>Shop</h5>
+                        <a href="pages/search.html?category=Skincare">Skincare</a>
+                        <a href="pages/search.html?category=Makeup">Makeup</a>
+                        <a href="pages/search.html?category=Haircare">Haircare</a>
+                        <a href="pages/search.html?category=Fragrance">Fragrance</a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h5>Customer Service</h5>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Shipping Info</a>
+                        <a href="#">Returns</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h5>Account</h5>
+                        <a href="pages/signin.html">Sign In</a>
+                        <a href="pages/signup.html">Create Account</a>
+                        <a href="pages/cart.html">Shopping Cart</a>
+                        <a href="#">Order History</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Lumea Cosmetics. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="js/main.js"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/products.js"></script>
+        <script src="js/cart.js"></script>
+
+        <script>
+            // Display products on home page
+            document.addEventListener('DOMContentLoaded', async () => {
+                try {
+                    const response = await fetch('api/products');
+                    Storage.set('products', products);
+                    const dbProducts = await response.json();
+                    console.log("Database Data:", dbProducts); // Check this in F12 Console
+
+                    const products = dbProducts.map(p => ({
+                            id: p.pid,
+                            name: p.pname,
+                            price: p.price,
+                            image: p.image, // Ensure this is exactly "img/your-file.jpg"
+                            category: p.category ? p.category.name : 'Cosmetics',
+                            badge: p.badge || 'Featured', // Default to Featured if empty
+                            rating: p.rating || 5.0
+                        }));
+
+                    // Now they will show up even if the DB badge column is null
+                    LumeaProducts.displayProducts(products, 'featuredProducts');
+                    LumeaProducts.displayProducts(products, 'newArrivals');
+
+                } catch (error) {
+                    console.error("Failed to load products:", error);
+                }
+            });
+        </script>
+    </body>
+
+</html>

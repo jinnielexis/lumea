@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Lumea Cosmetics</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="bg-cream">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-gem me-2"></i>Lumea Cosmetics
+            </a>
+            <a href="signup.html" class="btn btn-secondary-custom">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- Sign In Form -->
+    <div class="container py-5">
+        <div class="form-container">
+            <div class="text-center mb-4">
+                <i class="fas fa-sign-in-alt" style="font-size: 3rem; color: var(--primary-burgundy);"></i>
+                <h2 class="mt-3">Welcome Back</h2>
+                <p class="text-muted">Sign in to your account</p>
+            </div>
+
+            <form id="signinForm" onsubmit="LumeaAuth.handleSignIn(event)">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                        required>
+                </div>
+
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">
+                            Remember me
+                        </label>
+                    </div>
+                    <a href="#" class="text-primary-custom"
+                        onclick="LumeaAuth.handleForgotPassword(); return false;">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary-custom w-100 mb-3">
+                    <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                </button>
+
+                <div class="text-center">
+                    <p class="text-muted">Don't have an account? <a href="signup.html"
+                            class="text-primary-custom fw-bold">Sign Up</a></p>
+                    <hr class="my-3">
+                    <p class="text-muted mb-2">Admin Access</p>
+                    <a href="../admin/admin-signin.html" class="btn btn-secondary-custom w-100">
+                        <i class="fas fa-user-shield me-2"></i>Admin Sign In
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>
